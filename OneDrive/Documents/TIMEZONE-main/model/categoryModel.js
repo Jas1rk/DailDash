@@ -8,9 +8,14 @@ const categorySchema =  new mongoose.Schema({
     description:{
         type:String,
        
-    }
-})
+    },
+    isBlocked:{
+        type:Boolean,
+        default:false
+    },
+},{versionKey:false})
 
 const Category = mongoose.model('Category',categorySchema)
 
 module.exports = Category
+

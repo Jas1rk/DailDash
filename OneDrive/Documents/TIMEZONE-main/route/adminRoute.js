@@ -20,5 +20,7 @@ admin_router.get('/userUnblock',userlistcontroller.unblockUser)
 
 admin_router.get('/admincategory',adminCategoryController.admincategory)
 admin_router.post('/admincategory',adminCategoryController.admincategoryPost)
+admin_router.get('/categoryblock',adminCategoryController.adminCategoryBlock)
+admin_router.get('/categoryunblock',adminCategoryController.adminCategoryUnblock)
 
 module.exports = admin_router

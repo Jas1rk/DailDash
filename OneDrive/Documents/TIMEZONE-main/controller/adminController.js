@@ -39,17 +39,6 @@ const adminlogPost = async(req,res)=>{
     }else{
         console.log('conneot find admin')
     }
-        
-        //  console.log(hasshedPasswordAdmin)
-    //      if(hasshedPasswordAdmin){
-    //         res.redirect('/admindash')
-    // //      }else{
-    //         console.log("Invalid password")
-    //      }
-    //   }else{
-    //     console.log("Cannot Find The Admin")
-    //   }
-
 
     }catch(error){
         console.log(error)

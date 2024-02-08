@@ -28,6 +28,30 @@ const admincategoryPost = async(req,res)=>{
     }
 }
 
+const adminCategoryBlock = async(req,res)=>{
+    try{
+        const categories = req.query._id
+        console.log(categories)
+        const data = await Category.findByIdAndUpdate(categories,{isBlocked:true})
+        res.redirect('/admin/admincategory')
+
+    }catch(err){
+        console.log(err.message)
+    }
+}
+
+const adminCategoryUnblock = async(req,res)=>{
+    try{
+        const categories = req.query._id
+        console.log(categories)
+        const data = await Category.findByIdAndUpdate(categories,{isBlocked:false})
+        res.redirect('/admin/admincategory')
+
+    }catch(err){
+        console.log(err.message)
+    }
+}
+
 
 
 
@@ -35,7 +59,9 @@ const admincategoryPost = async(req,res)=>{
 module.exports = {
     admincategory,
     admincategoryPost,
-
+    adminCategoryBlock,
+    adminCategoryUnblock ,
+    
 
 }
 
